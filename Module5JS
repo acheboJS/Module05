@@ -1,0 +1,38 @@
+//Initial Dog Object
+let myDog = {
+	name: "Danny",
+	breed: "Great Dane",
+	color: "White",
+	show: "JoJo's Bizarre Adventure",
+	mySound: "I am very kind and I want to play",
+	greeting: function(){
+		return `Meet ${this.name}, a ${this.breed} from the show "${this.show}". ` + `${this.name} is ${this.color} dog. ` + `When I bark I sound like ${this.mySound}.`
+	}
+};
+// Properties for simple constructor
+function Dog(name, breed, show, color, mySound, canTalk){
+	this.name = name;
+	this.breed = breed;
+	this.show = show;
+	this.color = color;
+	this.mySound = mySound;
+	this.canTalk = canTalk;
+	
+	//Greeting Method
+	this.greeting = function(){
+		return `Meet ${this.name}, a ${this.breed} from the show "${this.show}". ` + `${this.name} is ${this.color} dog. ` + `When I bark I sound like ${this.mySound}. ` + ` Can I speak: ${this.canTalk}.`;
+	};
+};
+// New Dog Instance
+let myDogConst = new Dog(
+	"Danny",
+	"Great Dane",
+	"JoJo's Bizarre Adventure",
+	"White",
+	"I am very kind and I want to play",
+	false
+	);
+
+//Displays
+alert(myDog.greeting());
+alert(myDogConst.greeting());
